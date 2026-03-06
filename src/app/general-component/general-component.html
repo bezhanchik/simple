@@ -1,1 +1,8 @@
-<p>general-component works!</p>
+<h1>Список чекбоксов</h1>
+
+<div *ngFor="let item of items">
+    <input type="checkbox">
+    {{item.id}}
+    {{item.title}}
+    {{item.value}}
+</div>
