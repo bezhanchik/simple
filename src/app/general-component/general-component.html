@@ -1,9 +1,11 @@
+<p>Выбрано: {{ selected }}</p>
+<p>Сумма: {{ selectedTotal }}</p>
 
 
 <h1>Список чекбоксов</h1>
 
 <div *ngFor="let item of items">
-    <input type="checkbox">
+    <input type="checkbox" [checked]="item.isChecked" (change)="checkItem(item, $any($event.target).checked)">
     {{item.id}}
     {{item.title}}
     {{item.value}}

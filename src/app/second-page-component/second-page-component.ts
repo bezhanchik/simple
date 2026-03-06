@@ -22,4 +22,17 @@ export class SecondPageComponent {
     {id: 3, value: 10, isChecked: false, title: 'Item3'},
     {id: 4, value: 95, isChecked: false, title: 'Item4'}
   ]
+
+  checkItem(item: Item, checked: boolean) {
+    item.isChecked = checked;
+  }
+  get selected(): number {
+    return this.items.filter(item => item.isChecked).length;
+  }
+
+  get selectedTotal(): number {
+    return this.items
+    .filter(item => item.isChecked)
+    .reduce((sum,item) => sum + item.value, 0);
+  }
 }
