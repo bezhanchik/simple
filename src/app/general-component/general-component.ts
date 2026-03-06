@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { SidebarComponent } from '../sidebar-component/sidebar-component';
+SidebarComponent
 
 interface Item {
   id: number,
@@ -10,7 +12,7 @@ interface Item {
 
 @Component({
   selector: 'app-general-component',
-  imports: [CommonModule],
+  imports: [CommonModule, SidebarComponent],
   templateUrl: './general-component.html',
   styleUrl: './general-component.css',
 })
